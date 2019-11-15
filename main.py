@@ -14,7 +14,7 @@ import os
 
 def main():
     # The code goes here!
-    get_proxies()
+    get_proxies(proxytype="http", ssl="yes", anonymity="elite")
     initialize_app()
 
 
@@ -26,11 +26,11 @@ def get_proxies(request="getproxies", proxytype="http", timeout="10000", country
     Method: GET
     Sample: https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all
     request - request proxies (default: getproxies)
-    proxytype - http, https, socks4, and socks5 (default: http)
+    proxytype - http, socks4, and socks5 (default: http)
     timeout - time in ms (default: 10000)
-    country - country code e.g US, IN, RU etc. (default: all)
-    ssl - not sure what that means (default: all)
-    anonymity - type of anonymity (default: all)
+    country - all, US, CA, AU, DE, FR, GB, GE, IN, IT, JP, MX, PH, PK, US, RU, SG  (default: all)
+    ssl - all, yes, and no (default: all)
+    anonymity - elite, anonymous, and transparent (default: all)
     """
     request = request
     proxytype = proxytype
