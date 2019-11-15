@@ -23,7 +23,6 @@ def initialize_app():
 
 def get_proxies(request="getproxies", proxytype="http", timeout="10000", country="all", ssl="all", anonymity="all"):
     """
-    Free proxy API via Proxyscrape:
     Method: GET
     Sample: https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all
     request - request proxies (default: getproxies)
@@ -49,7 +48,7 @@ def get_proxies(request="getproxies", proxytype="http", timeout="10000", country
     r = requests.get(url)
     proxy_list = r.text
     proxies = proxy_list.split("\r\n")
-    proxy_file = open("./proxies"+str(datetime.now().hour)+str(datetime.now().minute)+str(datetime.now().second)+str(datetime.now().microsecond)+".txt", "w+")
+    proxy_file = open("./proxies.txt", "w+")
     for proxy in proxies:
         if(len(proxy)> 4):
             proxy_file.write(proxy+"\n")
