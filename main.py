@@ -5,18 +5,10 @@ Version: 0
 """
 
 # External modules
-import requests
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options, FirefoxProfile
-from selenium.webdriver.common.keys import Keys
-from datetime import datetime
-import time
-import os
-import wx
+
 
 # Internal modules
-from proxy_scraper import *
+from proxy import *
 
 def main():
     initialize_app()
